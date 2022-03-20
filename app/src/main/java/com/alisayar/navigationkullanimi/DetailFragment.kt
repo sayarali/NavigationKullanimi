@@ -23,9 +23,6 @@ class DetailFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         val nameArg = DetailFragmentArgs.fromBundle(requireArguments()).name
-
         binding.nameTv.text = nameArg
     }
-
-
 }

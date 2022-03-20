@@ -26,13 +26,10 @@ class HomeFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.enterBtn.setOnClickListener {
+        binding.enterBtn.setOnClickListener { view ->
             val name = binding.nameEt.text.toString()
             val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(name)
-            it.findNavController().navigate(action)
+            view.findNavController().navigate(action)
         }
-
     }
-
-
 }
